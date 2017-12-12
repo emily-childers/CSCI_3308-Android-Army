@@ -38,12 +38,17 @@ echo "<h4>Failed to connect to MySQL:
 //Fetch information from URL, store in php variables
 $manu = $_GET[manufacturer];
 $make = $_GET[make];
+$found = $_GET[found];
 
 //SQL query
 $query = "select * from phone where make='$make' and manufacturer='$manu'";
 $resultset = mysqli_query($connection,$query);
 $row = mysqli_fetch_array($resultset, MYSQLI_NUM); //turn sql results to an array
 //outputting phone info
+if ($found == "No")
+{
+  echo "<h2><center> Phone Not Found </center></h2>";
+}
 echo "<h3>";
 echo "<br>";
 echo "<center> Manufacturer: $row[1] </center>";
