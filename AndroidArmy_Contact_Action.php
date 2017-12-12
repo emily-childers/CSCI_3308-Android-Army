@@ -14,6 +14,7 @@ $mailheader = "From: $email \r\n";
 if (!empty ($_REQUEST['email']) && ($_REQUEST['comment']) && ($_REQUEST['name'])) {
   mail($recipient, $subject, $formcontent, $mailheader);
 echo "Thank you $name, your message has been received.";
+include 'AndroidArmy.html';
 exit;
 }
 
