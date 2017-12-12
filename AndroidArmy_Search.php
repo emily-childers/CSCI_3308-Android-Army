@@ -13,7 +13,14 @@
   $query = "SELECT make, manufacturer FROM phone WHERE make LIKE '$name';";
   $result = mysqli_query($connection, $query);
   $row = mysqli_fetch_array($result, MYSQLI_NUM);
-  header("Location:/AndroidArmy_Details.php?manufacturer=$row[1]&make=$row[0]")
+  if ($row > 0)
+  {
+    header("Location:/AndroidArmy_Details.php?manufacturer=$row[1]&make=$row[0]");
+  }
+  else
+  {
+    header("Location:/AndroidArmy_Details.php?found=No");
+  }
 	// echo "<b><p>";
 	// echo "<a href='AndroidArmy_Details.php?manufacturer=$row[1]&make=$row[0]'>";
 	// echo $row[1];
