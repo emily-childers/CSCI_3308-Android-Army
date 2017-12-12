@@ -1,5 +1,29 @@
 <html>
 <div id="main">
+
+
+<h9>
+<form action="action_page.php" method:"POST">
+
+  <div class="container">
+    <label><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname" required>
+
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit">Login</button>
+    <input type="checkbox" checked="checked"> Remember me
+  </div>
+</form>
+</h9>
+
+
+
+
+
+
+
 <head>
   <link rel="stylesheet" href="AndroidArmy_Phones.css">
   <link rel="icon" href="https://i.imgur.com/BxSspbo.png">
@@ -15,7 +39,7 @@
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="AndroidArmy.html">HOME</a>
-        <a href="AndroidArmy_About.hmtl">ABOUT</a>
+        <a href="AndroidArmy_About.html">ABOUT</a>
         <a href="AndroidArmy_Phones.php">PHONES</a>
         <a href="AndroidArmy_Submit.php">SUBMIT</a>
         <a href="AndroidArmy_Contact.html">CONTACT</a>
@@ -39,7 +63,7 @@ the description of what the page contains
 Every entry in our database. <br>
 <strong>Feel free to submit an unlisted update! </strong> <br>
 ~Format~<br>
-Make Model, O.S. Version Name, O.S. Release Date, Security
+Make Model
 </i> </h5>
 
 <div id="mainDiv">
@@ -60,10 +84,7 @@ else
 $query = "Select manufacturer, make, version, OSRelease, security from phone";
 $resultset = mysqli_query($connection,$query);
 $count = 0;
-
-
 while ($row = mysqli_fetch_array($resultset, MYSQLI_NUM)) {//loops through rows in database
-
 	echo "<b><p>";
 	echo "<a href='AndroidArmy_Details.php?manufacturer=$row[0]&make=$row[1]'>";
 	echo $row[0];
@@ -71,18 +92,13 @@ while ($row = mysqli_fetch_array($resultset, MYSQLI_NUM)) {//loops through rows 
 	echo $row[1];
 	echo "</a>";
 	echo "</p></b>";
-
 	$count = $count + 1;//counts number of phones
-
 }
-
-
 	echo "<br><b># of phones: ";//prints number of phones
 	echo "<big>";
 	echo $count;
 	echo "</big>";
 	echo "</b>";
-
 ?>
 </div>
 <style>
@@ -106,7 +122,6 @@ while ($row = mysqli_fetch_array($resultset, MYSQLI_NUM)) {//loops through rows 
 </style>
 <body>
 <!-- 
-
 -->
 <footer>
   <p>Created by Emily Childers, Remy Dahlke, Ashley Kim, James Mahon, Neil Nguyen, Adam Ten Hoeve</p>
