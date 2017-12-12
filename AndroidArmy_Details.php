@@ -47,7 +47,7 @@ $row = mysqli_fetch_array($resultset, MYSQLI_NUM); //turn sql results to an arra
 //outputting phone info
 if ($found == "No")
 {
-  echo "<h2><center> Phone Not Found </center></h2>"
+  echo "<h2><center> Phone Not Found </center></h2>";
 }
 echo "<h3>";
 echo "<br>";
