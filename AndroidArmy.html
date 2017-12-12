@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<div id="main">
+<head>
+  <link rel="stylesheet" href="AndroidArmy.css"> <!-- links to css page -->
+  <link rel="icon" href="https://i.imgur.com/BxSspbo.png"> <!-- link to icon image used, made in Adobe Illustrator-->
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> <!-- Link to use special google font-->
+  <title> Update Depot </title>
+  <div id="logo">
+    <img src="https://i.imgur.com/BxSspbo.png" width="125" height="125" alt="Logo">
+  </div>
+</head>
+<body>
+
+<h1>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> <!--JS to create a button that links to other pages-->
+        <a href="AndroidArmy.html">HOME</a>
+        <a href="AndroidArmy_About.html">ABOUT</a>
+        <a href="AndroidArmy_Phones.php">PHONES</a>
+        <a href="AndroidArmy_Submit.html">SUBMIT</a>
+        <a href="AndroidArmy_Contact.html">CONTACT</a>
+      </div>
+
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()"><a href="#menu"> <!--Adds meta tag, opens navigation-->
+      &#9776;
+      </a></span>
+</h1>
+<h2>Android updates, simplified.</h2>
+<style>
+input[type=text] {
+    width: 800px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    text-align: center;
+    /*background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;*/
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+  <div id="page-wrap">
+          <form action="AndroidArmy_Search.php" method = "POST">
+        <input type="text" name="phone"  placeholder="Search for phones...">
+        <!--<input type="submit" name="submit"  value="Send" >
+          </form>
+<!--
+<div id="page-wrap">
+<h5><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for phones...">
+<ul id="myUL">
+<-->
+  <!-- <li><a href="#">Galaxy S8+</a></li>
+  <li><a href="#">Galaxy J3</a></li>
+  <li><a href="#">Galaxy S6</a></li>
+  <li><a href="#">Pixel 2</a></li>
+  need php to get phone names -->
+  <!--
+  <php
+  echo "Goodbye";
+  $connection = @mysqli_connect("localhost", "admin", "password123", "AndroidArmy");
+  if(mysqli_connect_errno())
+  {
+  	echo "<h4>Failed to connect to MySQL:
+  	</h4>".mysqli_connect_error();
+  }
+  else
+  {
+    echo "<h4>Successfully connected to MySQL: </h4>";
+  }
+
+  $query = "select make from phones";
+  $result = mysqli_query($connection, $query);
+  //echo "<p>HELLO</p>";
+  while ($row = mysqli_fetch_array($result, MYSQLI_NUM))
+  {
+    echo "hello";
+  }
+  >-->
+</ul></h5>
+<script>
+function myFunction() { //Embedded JS
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+<footer>
+  <p>Created by Emily Childers, Remy Dahlke, Ashley Kim, James Mahon, Neil Nguyen, Adam Ten Hoeve</p>
+</footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="AndroidArmy.js"></script>
+</body>
+</script>
+</html>
