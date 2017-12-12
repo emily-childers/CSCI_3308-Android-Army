@@ -1,6 +1,6 @@
 <?php
   $name = $_REQUEST["phone"];
-  $connection = @mysqli_connect("localhost", "admin", "password123", "AndroidArmy");
+  $connection = @mysqli_connect("localhost", "rdahlke", "10405611", "project");
   if(mysqli_connect_errno())
   {
     echo "<h4>Failed to connect to MySQL:
