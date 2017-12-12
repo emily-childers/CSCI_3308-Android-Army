@@ -1,0 +1,268 @@
+/*Sliding menu based off of tutorial by w3schools.com */
+#logo {
+  text-align: center; /*Lines the logo into the center of the webpage*/
+}
+* {
+  font-family: helvetica,sans-serif; /*Sets font for all parts of the webpage*/
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1 {
+  float: left;
+  margin-top: -90px; /*Positioning for aesthetics*/
+
+
+}
+
+h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 36px;
+  opacity: 0.25;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+#page-wrap {
+     width: 800px;
+     margin: 0 auto;
+}
+
+
+h3 {
+  font-size: 16px;
+  margin-top: 100px;
+  display: inline;
+  text-align: center;
+  color: #45BF55
+}
+
+.boxed { /*For the sliding menu*/
+  text-align: center;
+  border: 1px solid #45BF55;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 510px;
+  margin-right: 510px;
+  outline-offset: 0px;
+  margin-top: 60px;
+
+}
+
+h4 {
+  font-size: 16px;
+  margin-top: 100px;
+  display: inline;
+  text-align: center;
+  color: white;
+}
+.boxed2{ /*Sliding menu continued*/
+  text-align: center;
+  border: 1px solid #45BF55;
+  border-radius: 25px;
+  padding: 10px;
+  margin-left: 510px;
+  margin-right: 510px;
+  outline-offset: 0px;
+  margin-top: 175px;
+  background: #45BF55
+
+}
+.boxed2 textarea:hover { /* makes button change when hovered over*/
+  opacity: .5;
+}
+
+
+#images {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.brightness {
+    background-color: white;
+    display: inline-block;
+
+}
+.brightness img:hover {
+    opacity: .5;
+}
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    /*margin-left: 50px;*/
+    top: 0;
+    left: 0;
+    background-color: #45BF55;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s;     /* 0.5 second transition effect to slide in the sidenav */
+
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: helvetica, sans-serif;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #d9d9d9;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+a {
+  text-decoration: none !important;
+  color: black;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+
+}
+
+footer {
+  padding-top: 400px;
+  word-wrap: break-word;
+  text-align: center;
+  font-size: 10px;
+  opacity: 0.25;
+}
+
+
+#myInput {
+	text-align:center;
+    background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 100%; /* 100% width */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+}
+#myUL {
+    /* Remove default list styling */
+    text-align: center;
+    list-style-type: none;
+    padding: 10;
+    margin: auto;
+}
+
+#myUL li a {
+	text-align: center;
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    margin-left: auto;
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+h9 {
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+}

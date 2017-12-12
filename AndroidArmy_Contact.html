@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<div id="main">
+<head>
+  <link rel="stylesheet" href="AndroidArmy_Submit.css">
+  <link rel="icon" href="https://i.imgur.com/BxSspbo.png">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <title> Update Depot </title>
+
+  <div id="logo">
+    <img src="https://i.imgur.com/BxSspbo.png" width="125" height="125" alt="Logo">
+  </div>
+</head>
+<body>
+
+<h1>
+	<!-- links to different pages -->
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="AndroidArmy.html">HOME</a>
+        <a href="AndroidArmy_About.html">ABOUT</a>
+        <a href="AndroidArmy_Phones.php">PHONES</a>
+        <a href="AndroidArmy_Submit.html">SUBMIT</a>
+        <a href="AndroidArmy_Contact.html">CONTACT</a>
+      </div>
+
+      <!-- Use any element to open the sidenav -->
+      <span onclick="openNav()"><a href="#menu">
+      &#9776;
+      </a></span>
+</h1>
+<h2>
+<!-- design for the submit box -->
+<style>
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    margin:auto;
+}
+</style>
+</head>
+<body>
+<style>.error {color: #FF0000;}</style>
+<?php
+// define variables and set to empty values
+$nameErr = $emailErr = $commentErr = "";
+ ?>
+<h2>Contact Form</h2>
+<h4><span class="error">* required field.</span></h4>
+<h3> <!-- gets user input(data) and sends it to AndroidArmy_Contact_Action.php -->
+<div class="container">
+  <form action="AndroidArmy_Contact_Action.php" method:"POST">
+    <label for="name">Name</label>
+    <span class="error">* <?php echo $nameErr;?></span>
+	<input type="text" name="name" placeholder="Your name..">
+	<label for="Email">Email</label>
+	<span class="error">* <?php echo $emailErr;?></span>
+	<input type="text" name="email" placeholder="Your email..">
+	<label for="manufacturer">Manufacturer</label>
+	<input type="text" name="manufacturer" placeholder="Your manufacturer..">
+	<label for="phone">phone</label>
+	<input type="text" name="phone" placeholder="Your phone..">
+	<label for="version">version</label>
+	<input type="text" name="version" placeholder="Your version..">
+    <label for="comment">Comment</label>
+    <span class="error">* <?php echo $commentErr?></span>
+	<textarea name="comment" placeholder="Enter comment.." style="height:200px"></textarea>
+    <input type="submit" name = "submit" value="Send">
+  </form>
+</div>
+</h3>
+<footer>
+  <p>Created by Emily Childers, Remy Dahlke, Ashley Kim, James Mahon, Neil Nguyen, Adam Ten Hoeve</p>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="AndroidArmy.js"></script>
+</body>
+</script>
+</html>
