@@ -4,7 +4,7 @@
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
 	</script>
 	<script>
-	document.write("hi");
+	//document.write("hi");
 	$(document).ready(function(){
 		$(".button").click(function(){
 			window.location.replace("http://localhost:8000/AndroidArmy.php");
