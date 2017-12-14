@@ -44,11 +44,7 @@ if(mysqli_query($connection, $sqlVERS)){
    	 echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
 	} 
 	
-if(mysqli_query($connection, $sqlVERS)){
-   	 echo "Inserted successfully into the database<br>";
-	} else{
-   	 echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
-	} 
+
   mysqli_close($connection); //Close connection
   
   echo "Submission Successful! ";
