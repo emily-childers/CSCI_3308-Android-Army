@@ -12,9 +12,16 @@ $connection = @mysqli_connect($server, $username, $password, $db);
 
 if(mysqli_connect_errno())
 {
-	echo "<h4>Failed to connect to MySQL:
-	</h4>".mysqli_connect_error();
+	echo "<h4>Failed to connect to MySQL: </h4>".mysqli_connect_error();
 }
+
+$deleteP = "Drop table phone;";
+$deleteM = "drop table manufacturer;";
+$deleteV = "drop table version;";
+
+mysqli_query($connection,$deleteP);
+mysqli_query($connection,$deleteM);
+mysqli_query($connection,$deleteV);
 
 $sqlPHONE = "Create table phone(id integer primary key, manufacturer char(50), make char(50), version char(50), OSRelease char(50), security char(50));";
 $sqlMANU = "Create table manufacturer(id integer primary key, manufacturer char(50), make char(50), version char(50), OSRelease char(50), security char(50));";
