@@ -7,7 +7,7 @@
 	//document.write("hi");
 	$(document).ready(function(){
 		$(".button").click(function(){
-			window.location.replace("https://androidarmy.herokuapp.com/AndroidArmy.php");
+			window.location.replace("https://androidarmy.herokuapp.com/AndroidArmy_Phones.php");
 			var clickBtnName = $(this).attr('name');
 			var ajaxurl = 'https://androidarmy.herokuapp.com/SQLDeleteHandler.php';
 			var data = {'Id': clickBtnName};
