@@ -25,7 +25,7 @@ mysqli_query($connection,$deleteV);
 
 $sqlPHONE = "Create table phone(id integer primary key, manufacturer char(50), make char(50), version char(50), OSRelease char(50), security char(50));";
 $sqlMANU = "Create table manufacturer(id integer primary key, manufacturer char(50), make char(50), version char(50), OSRelease char(50), security char(50));";
-$sqlVERS = "Create table version(id integer primary key, varsion char(50));";
+$sqlVERS = "Create table version(id integer primary key, version char(50));";
 
 if(mysqli_query($connection, $sqlPHONE)){
    	 echo "Inserted successfully into the database<br>";
