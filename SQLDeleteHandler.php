@@ -15,7 +15,7 @@ $Id = $_REQUEST['Id'];
 
 $query = "delete from phone where id='$Id';";
 mysqli_query($connection,$query);
-header("location: /AndroidArmy_Phones.html");
+header("location: AndroidArmy_Phones.html");
 exit();
 //echo "Inserted successfully into the database";  
 ?>

@@ -46,7 +46,7 @@ if(mysqli_query($connection, $sqlVERS)){
 	
 
   mysqli_close($connection); //Close connection
-  header("location: /AndroidArmy.html");
+  header("location: AndroidArmy.html");
   exit();
   
   //echo "Submission Successful! ";
