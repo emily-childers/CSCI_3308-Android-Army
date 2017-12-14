@@ -28,7 +28,14 @@
 </h1>
 <?php
 //connect to database
-$connection = @mysqli_connect("127.0.0.1","root","moo","project");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$connection = @mysqli_connect($server, $username, $password, $db);
 if(mysqli_connect_errno())
 { 
 echo "<h4>Failed to connect to MySQL: 
