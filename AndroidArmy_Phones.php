@@ -70,7 +70,14 @@ Make Model
 <br>
 <?php
 // Obtain a connection object by connecting to the db
-$connection = @mysqli_connect("localhost", "rdahlke", "10405611", "project");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$connection = @mysqli_connect($server, $username, $password, $db);
 // please fill these parameters with the actual data
 if(mysqli_connect_errno())
 {

@@ -1,6 +1,13 @@
 <?php
 
-$connection = @mysqli_connect("localhost", "rdahlke", "10405611", "project");
+$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$connection = @mysqli_connect($server, $username, $password, $db);
 // please fill these parameters with the actual data
 $Id = $_REQUEST['Id'];
 
