@@ -33,3 +33,6 @@ Collaboration Tools: In additon to our weekly in-person meetings, we will have a
 
 Proposed Architecture:
 The web app will be powered using HTML and CSS on the front end, mySQL on the backend to store phone version information, and PHP as an inbetween to display what users have reported, and input data from the form.
+
+Repo organization: 
+Our repository is organized such that it contains all HTML and CSS files (the page they correspond to is indicated by the _<name>.file format, i.e. AndroidArmy_Submit.html is the html for our submit page).  To build and run, take the database.sql file, create a database with the corresponding tables and information, and then go to all php files to input your database name, MySQL IP address, username, and password in order to allow the PHP files to connect to the database. After you've finished this step, simply open the AndroidArmy.html page (homepage file) in your browser and feel free to click through the pages on the menu. You can submit, send us an email, or simply browse the database. To test if your submission has gone through, just check the phones page to see if shows up!
