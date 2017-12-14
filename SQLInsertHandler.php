@@ -11,7 +11,7 @@ $db = substr($url["path"], 1);
 $connection = @mysqli_connect($server, $username, $password, $db);
 
 
-var_dump($_REQUEST);
+//var_dump($_REQUEST);
 
 $Id = $_REQUEST['id'];
 $Manufacturer = $_REQUEST['manufacturer']; //Accesses user filled form of type manufacturer
@@ -27,25 +27,27 @@ $sqlMANU = "INSERT INTO manufacturer (id, manufacturer, make, version, OSRelease
 $sqlVERS = "INSERT INTO version (id, version) VALUES ('$Id','$Version')";
 
 if(mysqli_query($connection, $sqlPHONE)){
-   	 echo "Inserted successfully into the database<br>";
+   	 //echo "Inserted successfully into the database<br>";
 	} else{
-   	 echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
+   	 //echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
 	} //Checks error in one database. May need to add more
 
 if(mysqli_query($connection, $sqlMANU)){
-   	 echo "Inserted successfully into the database<br>";
+   	 //echo "Inserted successfully into the database<br>";
 	} else{
-   	 echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
+   	 //echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
 	} 
 
 if(mysqli_query($connection, $sqlVERS)){
-   	 echo "Inserted successfully into the database<br>";
+   	 //echo "Inserted successfully into the database<br>";
 	} else{
-   	 echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
+   	 //echo "ERROR: Could not able to execute $sqlPHONE. " . mysqli_error($connection);
 	} 
 	
 
   mysqli_close($connection); //Close connection
+  header("location: /AndroidArmy.html");
+  exit();
   
-  echo "Submission Successful! ";
+  //echo "Submission Successful! ";
 ?>
