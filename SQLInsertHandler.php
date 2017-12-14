@@ -24,7 +24,7 @@ $Security = $_REQUEST['security'];
 $sqlPHONE = "INSERT INTO phone (id, manufacturer, make, version, OSRelease, security) VALUES ('$Id','$Manufacturer','$Make','$Version','$OSRelease','$Security')";
 //Inserts values from submission into our data tables
 $sqlMANU = "INSERT INTO manufacturer (id, manufacturer, make, version, OSRelease, security) VALUES ('$Id','$Manufacturer','$Make','$Version','$OSRelease','$Security')";
-$sqlVERS = "INSERT INTO version (id, version_name) VALUES ('$Id','$Version')";
+$sqlVERS = "INSERT INTO version (id, version) VALUES ('$Id','$Version')";
 
 if(mysqli_query($connection, $sqlPHONE)){
    	 echo "Inserted successfully into the database<br>";
