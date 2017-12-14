@@ -11,11 +11,12 @@ $connection = @mysqli_connect($server, $username, $password, $db);
 // please fill these parameters with the actual data
 $Id = $_REQUEST['Id'];
 
-echo "$Id";
+//echo "$Id";
 
 $query = "delete from phone where id='$Id';";
 mysqli_query($connection,$query);
-include 'AndroidArmy_Phones.php';
+header("location: /AndroidArmy.html");
+exit();
 //echo "Inserted successfully into the database";  
 ?>
 
